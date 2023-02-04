@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 
 
 dotenv.config({ path: ".env" });
+mongoose.set('strictQuery',false);
 
 const mongoDB = async () => {
     await mongoose
