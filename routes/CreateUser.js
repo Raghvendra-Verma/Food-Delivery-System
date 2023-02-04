@@ -78,7 +78,7 @@ router.post("/loginuser", [
 
 
 // Get logged in User details, Login Required.
-router.post('/getuser', fetch, async (req, res) => {
+router.post('/getuser',async (req, res) => {
     try {
         const userId = req.user.id;
         const user = await User.findById(userId).select("-password") // -password will not pick password from db.
