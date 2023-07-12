@@ -1,0 +1,30 @@
+{
+  "proxy": "http://localhost:8080/",
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is my mern food delivery app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix ./client ",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+  },
+  "author": "Raghvendra_Verma",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.2",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "update": "^0.7.4"
+  }
+}
