@@ -27,15 +27,15 @@ app.use('/api', require("./routes/CreateUser"));
 app.use('/api', require("./routes/DisplayData"));
 app.use('/api', require("./routes/OrderData"));
 
-console.log("dir",path.join(__dirname, '../client/build'));
-console.log("dir1",path.join(__dirname, '../client/build/index.html'));
+// console.log("dir",path.join(__dirname, '../client/build'));
+// console.log("dir1",path.join(__dirname, '../client/build/index.html'));
 //static files
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '/build')));
 
 //getting the static files
 
 app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    res.sendFile(path.join(__dirname, "/build/index.html"));
 })
 
 app.listen(port, () => {
