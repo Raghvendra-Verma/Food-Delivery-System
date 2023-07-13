@@ -1,5 +1,4 @@
 {
-  "proxy": "http://localhost:8080/",
   "name": "backend",
   "version": "1.0.0",
   "description": "This is my mern food delivery app",

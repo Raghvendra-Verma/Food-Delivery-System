@@ -10,7 +10,7 @@ mongoDB();
 
 //creating middleware
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    //res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
@@ -27,8 +27,7 @@ app.use('/api', require("./routes/CreateUser"));
 app.use('/api', require("./routes/DisplayData"));
 app.use('/api', require("./routes/OrderData"));
 
-// console.log("dir",path.join(__dirname, '../client/build'));
-// console.log("dir1",path.join(__dirname, '../client/build/index.html'));
+
 //static files
 app.use(express.static(path.join(__dirname, '/build')));
 
